@@ -33,10 +33,29 @@
         </h2>
       </div>
       <div class="col-sm-4">
-        <h2 class="heading">Mars Weather Twitter</h2>
-        <img src={{mars.mars_weather}}>
+        <div class="well">
+            <h3 class="heading">Latest Mars Weather Tweet</h3>
+            {{mars.mars_weather}}
+        </div>
       </div>
     </div>
+
+
+    <!-- mars hemi sectio -->
+    <div class="row" id="mars_hemi">
+      <div class="col-md-12">
+        <h2 class="text-center">Mars Hemispheres</h2>
+      </div>
+
+      <div class="col-md-6">
+        <img src={{mars.hemisphere_image_urls[0].img_url}} class="img-responsive" alt="Responsive image">
+      </div>
+      <div class="col-md-6">
+        <h3 class="heading">{{mars.hemisphere_image_urls[0].img_url}}</h3>
+      </div>
+
+    </div>
+
 
   </div>
 </body>

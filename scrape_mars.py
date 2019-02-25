@@ -100,7 +100,7 @@ def scrape():
             
             img_src = 'https://astrogeology.usgs.gov' + soup.find('img', class_="wide-image")['src']
             
-            hemisphere_image_urls.append({"title":title, "img_url":link})
+            hemisphere_image_urls.append({"title":title, "img_url":img_src})
             
             url = 'https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars'
 
