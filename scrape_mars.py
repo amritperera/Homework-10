@@ -43,8 +43,9 @@ def scrape():
     ##---------------------------------------------------------------
     url = 'https://space-facts.com/mars/'
     ##---------------------------------------------------------------
-    # tables = pd.read_html(url)
+    tables = pd.read_html(url)
     # tables[0]
+    html_table = pd.DataFrame.to_html(tables[0])
     ##---------------------------------------------------------------
 
     ## MARS WEATHER
@@ -117,7 +118,7 @@ def scrape():
     "news_p":news_p,
     "featured_image":featured_image_url,
     "mars_weather":mars_weather,
-    # "facts":tables[0],
+    "facts":html_table,
     "hemisphere_image_urls":hemisphere_image_urls
     }
     ##---------------------------------------------------------------
